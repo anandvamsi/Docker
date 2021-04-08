@@ -1,0 +1,39 @@
+Docker Storage
+
+Storage Drivers
+volume Drivers
+
+When docker is installed.
+/var/lib/docker
+- aufs
+- containers
+- images
+- volumes
+
+Docker follows a Layered architrecture
+
+#To create a docker volumne
+
+#docker volume create data_volume
+mounting volume
+#docker run -v data_volumn:/var/lib/mysql mysql
+
+
+To mount existing volume(/data/mysql)
+docker run -v /data/mysql:/var/lib/mysql mysql
+
+
+New format for mounting
+docker run --mount type=bind,source=/data/mysql
+target=/var/lib/mysql mysql
+
+
+
+Few storage drivers used by dockers
+-------------------------------------
+Aufs ::- for ubuntu default.
+ZFS
+BTRFS
+DeviceMapper
+Overlay
+Overlay2
