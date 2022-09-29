@@ -1,0 +1,22 @@
+sudo yum install docker
+sudo systemctl enable docker
+sudo systemctl start docker.service
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2022-09-29 05:22:51 UTC; 1h 21min ago
+     Docs: https://docs.docker.com
+ Main PID: 3439 (dockerd)
+   CGroup: /system.slice/docker.service
+           └─3439 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --de
+
+Sep 29 05:22:51 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:22:51.8262295
+Sep 29 05:22:51 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:22:51.8267740
+Sep 29 05:22:51 ip-172-31-94-23.ec2.internal systemd[1]: Started Docker Application Container
+Sep 29 05:22:51 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:22:51.8550502
+Sep 29 05:24:40 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:24:40.5224453
+Sep 29 05:29:22 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:29:22.5919877
+Sep 29 05:31:46 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:31:46.2503136
+Sep 29 05:32:22 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:32:22.6305778
+Sep 29 05:33:14 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:33:14.1726679
+Sep 29 05:37:09 ip-172-31-94-23.ec2.internal dockerd[3439]: time="2022-09-29T05:37:09.2652250
+Hint: Some lines were ellipsized, use -l to show in full.
