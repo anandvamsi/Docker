@@ -1,0 +1,52 @@
+#search
+docker search images
+
+docker run -itd image
+docker exec -it <containername> -s /bin/bash
+docker rename nginx nginxcarbob
+
+TO remove container 
+docker rm container 
+docker rm --force container-id
+
+docker process
+------------------
+docker ps
+docker ps -a
+
+
+#To remove all the stopped containers
+docker rm $(docker ps -a -q)
+
+
+#Docker logs of the container
+docker logs -f nginx
+
+#Exposing ports
+Expose multiple ports
+docker run -d -p 5000/tcp -p 53/udp image-name/id
+docker run -d -p 8080:500/tcp
+
+To Autmatically start the container even after the server start Apply the below command
+#docker run -d --restart unless-stopped -p 8080:80 nginx
+
+Docker inspect
+docker inspect  --format '{{.NetworkSettings.IPAddress}}' vigilant_roentgen
+docker inspect <container_name> | grep IPAddress | cut -d '"' -f 4
+
+#Mount volume in docker with ro permission
+docker run -it  -v /tmp:/data:ro ubuntu /bin/bash
+
+
+Docker networking commands
+docker network help
+docker network inspect bridge 
+docker network create mynetwork----create a network
+docker network create -d bridge mynetwork2--- d specifies the the network type
+docker network rm mynetwork-- Remove the network 
+docker container run -it --net=mynetwork nginx---connect to a network
+docker container run -it --net=host nginx---for host only network
+
+DOcker backup and load.
+docker save debian -o mydebian.tar - Save and Load Docker Container Image to/from a tar 
+docker load -i mydebian.tar - Load Docker Image from tar file.
