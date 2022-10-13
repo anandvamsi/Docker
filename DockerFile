@@ -1,0 +1,62 @@
+Author
+FROM
+
+ADD
+ADD
+ADD is used to add files or directories and remote files from URL from source host filesystem to a destination in the container file system
+
+RUN
+RUN executes the instructions in a new layer on top of the existing image and commit those layers and the resulted 
+layer will be used for the next instructions in the Dockerfile
+
+CMD
+
+
+LABEL
+LABEL is used to add some metadata to the image. if we use the same label as the base image and the most recent label value is applied.
+
+COPY
+COPY is used to copy files or directories from source host filesystem to a destination in the container file system.
+ consider this example where we are copying package.json
+
+ENV
+ENV sets the environment variables for the subsequent instructions in the build stage
+
+EXPOSE
+EXPOSE is used as documentation for the port. This is just a
+ communication between the person who builds the image and the person who runs the container
+
+
+WORKDIR
+WORKDIR sets the working directory for all the consecutive commands. we can have multiple WORKDIR commands and will be appended with a relative path.
+ Consider the following example where we have two WORKDIR commands leads to /usr/node/app
+
+ENTRYPOINT
+we are using ENTRYPOINT for executable command and using CMD command to pass some default commands to the executabl
+
+
+ARG
+ARG is used to pass some arguments to consecutive instructions and this is only command other than a comment can be used before FROM. 
+
+docker build -t dockerfile10 --build-arg NODE_VERSION=8.11.4  -f Dockerfile10 .
+
+USER
+USER instruction sets the user name and optionally the user group to use when running the image and for any instructions that follow it in the Dockerfile
+
+
+# command executable and version
+ENTRYPOINT ["node"]
+
+
+
+
+
+
+
+
+
+
+FROM node:8.11-slim
+# command executable and version
+CMD ["-v"]
+ENTRYPOINT ["node"]
