@@ -1,0 +1,21 @@
+Docker push
+-----------------
+
+step1: docker login
+provide the username and password of hub.docker.com
+
+step2: Tag the images with login name
+docker tag node2 anandvamsiv/node1
+
+step3:
+docker push anandvamsi/node1
+The push refers to a repository [docker.io/anandvamsi/node1]
+An image does not exist locally with the tag: docker.io/anandvamsi/node1
+
+step4:
+docker pull anandvamsiv/node1
+Using default tag: latest
+Trying to pull repository docker.io/anandvamsiv/node1 ...
+latest: Pulling from docker.io/anandvamsiv/node1
+Digest: sha256:5aa586d823cd2496297a77843c443584bd0e05809cc0a5d2577dad0f163cd7dd
+Status: Downloaded newer image for docker.io/anandvamsiv/node1:latest
