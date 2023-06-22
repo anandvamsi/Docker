@@ -1,0 +1,6 @@
+DockerReference:
+using logging solution::
+https://wdullaer.com/blog/2016/02/28/pass-credentials-to-the-awslogs-docker-logging-driver-on-ubuntu/
+
+Bridged network Model
+https://docs.docker.com/network/network-tutorial-standalone/
