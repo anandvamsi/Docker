@@ -1,3 +1,4 @@
+```bash
 #
 # NOTE: THIS DOCKERFILE IS GENERATED VIA "apply-templates.sh"
 #
@@ -47,3 +48,4 @@ ADD dplcheck.war /usr/local/tomcat/webapps
 ENTRYPOINT []
 
 CMD ["catalina.sh", "run"]
+```
